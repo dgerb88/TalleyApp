@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Talley_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvu-PP-AVV">
+                                <rect key="frame" x="184.33333333333334" y="619" width="24.666666666666657" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibH-hM-vsw">
+                                <rect key="frame" x="146" y="692.66666666666663" width="101" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Increment"/>
+                                <connections>
+                                    <action selector="incrementThisSucker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L27-rz-Ija"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoQ-01-lEt">
+                                <rect key="frame" x="142" y="747" width="109" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="IDd-OR-u6N"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Decrement"/>
+                                <connections>
+                                    <action selector="decrement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JQN-pP-5IY"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="jQS-bi-ec9">
+                                <rect key="frame" x="78" y="264" width="94" height="32"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="YMD-t5-Ujd"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e55-C0-2t5">
+                                <rect key="frame" x="307" y="265" width="12" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jQS-bi-ec9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="2pa-sF-Oyw"/>
+                            <constraint firstItem="zvu-PP-AVV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8SV-FQ-ENG"/>
+                            <constraint firstItem="ibH-hM-vsw" firstAttribute="centerX" secondItem="QoQ-01-lEt" secondAttribute="centerX" id="Kls-Zw-Bhc"/>
+                            <constraint firstItem="jQS-bi-ec9" firstAttribute="centerY" secondItem="e55-C0-2t5" secondAttribute="centerY" id="P9Y-az-uhc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QoQ-01-lEt" secondAttribute="bottom" constant="36" id="RcM-37-Yss"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e55-C0-2t5" secondAttribute="trailing" constant="74" id="UiL-Pf-o5v"/>
+                            <constraint firstItem="ibH-hM-vsw" firstAttribute="top" secondItem="zvu-PP-AVV" secondAttribute="bottom" constant="25.666666666666515" id="XPD-kC-fuK"/>
+                            <constraint firstItem="zvu-PP-AVV" firstAttribute="centerX" secondItem="ibH-hM-vsw" secondAttribute="centerX" id="dLs-9v-akc"/>
+                            <constraint firstItem="jQS-bi-ec9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="205" id="lAB-8e-r6Y"/>
+                            <constraint firstItem="QoQ-01-lEt" firstAttribute="top" secondItem="ibH-hM-vsw" secondAttribute="bottom" constant="20.000000000000114" id="zGM-jS-HeI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="incrementAmountLabel" destination="e55-C0-2t5" id="mQh-br-8yV"/>
+                        <outlet property="incrementValueLabel" destination="zvu-PP-AVV" id="Efw-gA-iVh"/>
+                        <outlet property="stepper" destination="jQS-bi-ec9" id="GKc-vs-Nno"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
